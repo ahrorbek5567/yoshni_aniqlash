@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshni aniqlash</title>
+</head>
+<body>
+    <div style="width: 550px;height: 400px;border: 1px solid black;margin-left: 500px;margin-top: 100px;text-align: center;">
+        <h1 style="font-size: 50px;text-align: center;">Yoshingizni  aniqlang </h1>
+        <h3 style="text-align: center;">Tug'ilgan yilingizni kiriting</h3>
+        <div style="text-align: center;"><input class="input" type="text" style="border-radius: 40px;font-size: 20px;" placeholder="Misol u-n:2005"></div><br><br>
+      <div style="text-align: center;">
+        <button id="btn" onclick="qiymat()" style="border-radius: 40px;color: white;background-color:green ;font-size: 20px;text-align: center;">Hisoblash</button>
+        <button onclick="salom()" style="border-radius: 40px;color: white ;text-align: center;  background-color:red ;font-size: 20px;margin-left: 40px;">Yangilash</button>
+      </div>
+        <h1 class="natija"></h1>
+    </div>
+    <script>
+        function qiymat() {
+            let input=document.querySelector('.input').value
+            let hozirgiVaqt =new Date().getFullYear();
+            yosh = hozirgiVaqt - input
+            document.querySelector('.natija').innerHTML = `Sizning yoshingiz ${yosh}`
+
+
+            
+
+        }
+        function salom() {
+            window.location.reload();
+        }
+
+        let btn = document.querySelector('#btn')
+        window.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        qiymat()
+   }
+    })
+    </script>
+</body>
+</html>

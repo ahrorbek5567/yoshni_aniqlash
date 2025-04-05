@@ -1,0 +1,1 @@
+# yoshni_aniqlash
